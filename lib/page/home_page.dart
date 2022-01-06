@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_flutter/components/background_widget.dart';
-import 'package:pokedex_flutter/components/framelamp_widget.dart';
+
+import '../components/background_widget.dart';
+import '../components/bigbutton_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,8 +17,8 @@ class HomePage extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: const [
-            FrameLamp(
-              size: 200,
+            BigButton(
+              size: 150,
             )
           ],
         ),

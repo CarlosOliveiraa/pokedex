@@ -22,8 +22,7 @@ class FrameLamp extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Container(
-            alignment: Alignment(
-                constraints.maxWidth * 0.4, constraints.maxHeight * 0.40),
+            alignment: Alignment.center,
             width: constraints.maxWidth * 0.77,
             height: constraints.maxHeight * 0.77,
             decoration: const BoxDecoration(
@@ -36,18 +35,17 @@ class FrameLamp extends StatelessWidget {
                 ],
               ),
             ),
-            child: Center(
-              child: Container(
-                width: constraints.maxWidth * 0.2,
-                height: constraints.maxHeight * 0.2,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: RadialGradient(
-                    colors: [
-                      Color(0xffFFFFFF),
-                      Color(0xff3AC2F9),
-                    ],
-                  ),
+            child: Container(
+              width: constraints.maxWidth * 0.2,
+              height: constraints.maxHeight * 0.2,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: RadialGradient(
+                  colors: [
+                    Color(0xffFFFFFF),
+                    Color(0xff3AC2F9),
+                  ],
+                  stops: [0, 1],
                 ),
               ),
             ),
