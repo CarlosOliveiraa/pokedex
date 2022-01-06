@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex_flutter/components/backtopside_widget.dart';
 
 import '../components/background_widget.dart';
-import '../components/bigbutton_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,10 +16,11 @@ class HomePage extends StatelessWidget {
         height: size.height,
         child: Stack(
           alignment: Alignment.center,
-          children: const [
-            BigButton(
-              size: 150,
-            )
+          children: [
+            BackTopSideWidget(
+              width: size.width * 1,
+              height: size.height * 0.23,
+            ),
           ],
         ),
       ),
