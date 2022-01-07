@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_flutter/components/backtopside_widget.dart';
+import 'package:pokedex_flutter/components/screen_widget.dart';
 
 import '../components/background_widget.dart';
 
@@ -15,12 +16,15 @@ class HomePage extends StatelessWidget {
         width: size.width,
         height: size.height,
         child: Stack(
-          alignment: Alignment.center,
           children: [
             BackTopSideWidget(
               width: size.width * 1,
               height: size.height * 0.23,
             ),
+            const Align(
+              alignment: Alignment.center,
+              child: ScreenWidget(),
+            )
           ],
         ),
       ),

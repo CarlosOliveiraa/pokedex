@@ -19,7 +19,7 @@ class BackGroundWidget extends StatelessWidget {
     return Container(
       width: width,
       height: height,
-      color: Colors.white,
+      color: color,
       child: child,
     );
   }
