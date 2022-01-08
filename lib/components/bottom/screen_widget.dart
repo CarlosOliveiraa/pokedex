@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pokedex_flutter/components/bottom/sound_widget.dart';
 
-
 import 'ledscreenbutton_widget.dart';
 
 class ScreenWidget extends StatelessWidget {
@@ -41,9 +40,13 @@ class ScreenWidget extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
-                    LedScreenButton(),
-                    SoundWidget(),
+                  children: [
+                    LedScreenButton(
+                      size: constraints.maxWidth * 0.05,
+                    ),
+                    SoundWidget(
+                      size: constraints.maxWidth * 0.08,
+                    ),
                   ],
                 )
               ],
