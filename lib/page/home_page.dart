@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_flutter/components/backtopside_widget.dart';
+import 'package:pokedex_flutter/components/directional_widget.dart';
+
+import 'package:pokedex_flutter/components/greenbutton_widget.dart';
+import 'package:pokedex_flutter/components/rightbar_widget.dart';
 import 'package:pokedex_flutter/components/screen_widget.dart';
 
 import '../components/background_widget.dart';
@@ -24,6 +28,45 @@ class HomePage extends StatelessWidget {
             const Align(
               alignment: Alignment.center,
               child: ScreenWidget(),
+            ),
+            const Align(
+              alignment: Alignment.center,
+              child: GreenButton(),
+            ),
+            const Align(
+              alignment: Alignment.bottomRight,
+              child: RightBar(),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const DirectionalWidget(
+                    direction: Direction.top,
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        DirectionalWidget(
+                          direction: Direction.top,
+                        ),
+                        DirectionalWidget(
+                          direction: Direction.center,
+                        ),
+                        DirectionalWidget(
+                          direction: Direction.right,
+                        ),
+                      ],
+                    ),
+                  ),
+                  const DirectionalWidget(
+                    direction: Direction.down,
+                  )
+                ],
+              ),
             )
           ],
         ),

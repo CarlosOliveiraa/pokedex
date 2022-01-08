@@ -14,7 +14,7 @@ class ScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipPath(
-      // clipper: ScreenClipper(),
+      clipper: ScreenClipper(),
       child: Container(
         alignment: Alignment.center,
         width: width,
@@ -59,12 +59,13 @@ class ScreenClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     Path path = Path();
 
-    path.lineTo(size.width, size.height * 5);
+    path.lineTo(0, 0);
+    path.lineTo(size.width, 0);
+    path.lineTo(size.width, size.height);
+    path.lineTo(size.width * 0.13, size.height);
+    path.lineTo(0, size.height * 0.8);
 
-    path.lineTo(size.width, 0);
-    path.lineTo(0, size.height);
-    path.lineTo(0, size.height);
-    path.lineTo(size.width, 0);
+    path.close();
 
     return path;
   }
