@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:pokedex_flutter/components/sound_widget.dart';
+import 'package:pokedex_flutter/components/bottom/sound_widget.dart';
+
 
 import 'ledscreenbutton_widget.dart';
 

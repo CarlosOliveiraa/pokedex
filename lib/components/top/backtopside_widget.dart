@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex_flutter/components/framelamp_widget.dart';
-import 'package:pokedex_flutter/components/led_widget.dart';
+import 'package:pokedex_flutter/components/top/framelamp_widget.dart';
+import 'package:pokedex_flutter/components/top/led_widget.dart';
 
 class BackTopSideWidget extends StatelessWidget {
   final double width;

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_flutter/components/backtopside_widget.dart';
-import 'package:pokedex_flutter/components/directional_widget.dart';
+import 'package:pokedex_flutter/components/bottom/directional_widget.dart';
+import 'package:pokedex_flutter/components/bottom/greenbutton_widget.dart';
+import 'package:pokedex_flutter/components/bottom/screen_widget.dart';
+import 'package:pokedex_flutter/components/top/backtopside_widget.dart';
 
-import 'package:pokedex_flutter/components/greenbutton_widget.dart';
 import 'package:pokedex_flutter/components/rightbar_widget.dart';
-import 'package:pokedex_flutter/components/screen_widget.dart';
 
-import '../components/background_widget.dart';
+import 'background_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
