@@ -6,12 +6,13 @@ class DirectionalWidget extends StatelessWidget {
   final double width;
   final double height;
   final Direction direction;
+  final Widget? child;
 
   const DirectionalWidget({
     Key? key,
     this.width = 34,
     this.height = 33,
-    this.direction = Direction.center,
+    this.direction = Direction.center, this.child,
   }) : super(key: key);
 
   @override
@@ -76,6 +77,7 @@ class DirectionalWidget extends StatelessWidget {
       width: width,
       height: height,
       decoration: decoration,
+      child: child,
     );
   }
 }
