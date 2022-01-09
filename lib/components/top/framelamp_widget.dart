@@ -22,7 +22,7 @@ class FrameLamp extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Container(
-            alignment: Alignment.center,
+            alignment: Alignment.topLeft * 0.33,
             width: constraints.maxWidth * 0.77,
             height: constraints.maxHeight * 0.77,
             decoration: const BoxDecoration(
