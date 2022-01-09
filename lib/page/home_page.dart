@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
               top: size.height * 0.31,
               left: size.width * 0.1,
               child: ScreenWidget(
-                width: size.width * 0.7,
+                width: size.width * 0.71,
                 height: size.height * 0.35,
               ),
             ),
@@ -36,9 +36,13 @@ class HomePage extends StatelessWidget {
             //   alignment: Alignment.center,
             //   child: GreenButton(),
             // ),
-            const Align(
-              alignment: Alignment.bottomRight,
-              child: RightBar(),
+            Positioned(
+              top: size.height * 0.1,
+              left: size.width * 0.91,
+              child: RightBar(
+                width: size.width * 0.09,
+                height: size.height * 0.91,
+              ),
             ),
             // Center(
             //   child: Buttons(

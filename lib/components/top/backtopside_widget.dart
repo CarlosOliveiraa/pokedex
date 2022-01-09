@@ -35,28 +35,33 @@ class BackTopSideWidget extends StatelessWidget {
               color: frontColor,
               child: Stack(
                 children: [
-                  const Positioned(
-                    top: 24,
-                    left: 29,
-                    bottom: 32,
-                    child: FrameLamp(),
+                  Positioned(
+                    top: height * 0.17,
+                    left: width * 0.07,
+                    bottom: height * 0.22,
+                    child: FrameLamp(
+                      size: constraints.maxWidth * 0.23,
+                    ),
                   ),
                   Positioned(
-                    top: 25,
-                    left: 132,
+                    top: height * 0.17,
+                    left: width * 0.35,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         LedWidget(
                           led: Led.redLed,
+                          size: width * 0.03,
                         ),
-                        SizedBox(width: 12),
+                        SizedBox(width: width * 0.03),
                         LedWidget(
                           led: Led.yellowled,
+                          size: width * 0.03,
                         ),
-                        SizedBox(width: 12),
+                        SizedBox(width: width * 0.03),
                         LedWidget(
                           led: Led.greenLed,
+                          size: width * 0.03,
                         ),
                       ],
                     ),

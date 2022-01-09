@@ -39,10 +39,13 @@ class ScreenWidget extends StatelessWidget {
                       color: const Color(0xff1E1E1E)),
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     LedScreenButton(
                       size: constraints.maxWidth * 0.05,
+                    ),
+                    SizedBox(
+                      width: width * 0.55,
                     ),
                     SoundWidget(
                       size: constraints.maxWidth * 0.08,
