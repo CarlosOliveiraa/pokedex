@@ -36,7 +36,7 @@ class ScreenWidget extends StatelessWidget {
                   height: constraints.maxHeight * 0.69,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(width * 0.042),
-                      color: const Color(0xff1E1E1E)),
+                      color: const Color(0xff777474)),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

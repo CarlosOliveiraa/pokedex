@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_flutter/components/bottom/bottonactions_widget.dart';
+import 'package:pokedex_flutter/components/painter/my_painter_widget.dart';
 
-import '../components/bottom/buttons_widget.dart';
+import '../components/bottom/bottonactions_widget.dart';
 import '../components/bottom/screen_widget.dart';
 import '../components/top/backtopside_widget.dart';
 import 'background_widget.dart';
@@ -30,6 +30,14 @@ class HomePage extends StatelessWidget {
               child: ScreenWidget(
                 width: size.width * 0.71,
                 height: size.height * 0.35,
+              ),
+            ),
+            Positioned(
+              top: size.height * 0.37,
+              left: size.width * 0.24,
+              child: MyPainter(
+                width: size.width * 0.43,
+                height: size.height * 0.24,
               ),
             ),
             // const Align(

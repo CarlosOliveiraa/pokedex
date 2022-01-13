@@ -17,7 +17,10 @@ class FrameLamp extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: const Color(0xffD9E8EB),
-        border: Border.all(color: const Color(0xffAD282A), width: size * 0.011),
+        border: Border.all(
+          color: const Color(0xffAD282A),
+          width: size * 0.011,
+        ),
       ),
       child: LayoutBuilder(
         builder: (context, constraints) {
