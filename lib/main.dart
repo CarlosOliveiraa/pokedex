@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pokedex_flutter/components/painter/my_painter_widget.dart';
 
 import 'page/home_page.dart';
 import 'page/novapage.dart';
