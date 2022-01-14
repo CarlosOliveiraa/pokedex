@@ -33,7 +33,7 @@ class MyPainter1 extends CustomPainter {
     var paint4 = Paint()..color = const Color(0xffFFFFFF);
     var paintBoca = Paint()
       ..color = const Color(0xff000000)
-      ..strokeWidth = 3.0
+      ..strokeWidth = 1.0
       ..style = PaintingStyle.stroke;
     var paintCheek = Paint()..color = const Color(0xffF00506);
 
@@ -53,7 +53,7 @@ class MyPainter1 extends CustomPainter {
     //ORELHA ESQUERDA
 
     Path ear1 = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.13, size.height * 0.06,
+      ..addOval(Rect.fromLTWH(size.width * 0.13, size.height * 0.07,
           size.width * 0.46, size.height * 0.14));
     ear1 = ear1.transform(
         _rotatePath(Offset(size.width * 0.13, size.height * 0.18), _rad(-176)));
@@ -63,7 +63,7 @@ class MyPainter1 extends CustomPainter {
 
     //ORELHA DIREITA
     Path ear2 = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.30, size.height * 0.7,
+      ..addOval(Rect.fromLTWH(size.width * 0.31, size.height * 0.66,
           size.width * 0.46, size.height * 0.14));
     ear2 = ear2.transform(
         _rotatePath(Offset(size.width * 0.13, size.height * 0.18), _rad(176)));
@@ -88,8 +88,8 @@ class MyPainter1 extends CustomPainter {
 
     //ORELHA ESQUERDA PARTE AMARELA
     Path ear2Y = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.51, size.height * 0.01,
-          size.width * 0.34, size.height * 0.53));
+      ..addOval(Rect.fromLTWH(size.width * 0.529, size.height * 0.01,
+          size.width * 0.34, size.height * 0.60));
 
     Path ear2D = Path.combine(PathOperation.intersect, ear2Y, ear2);
     canvas.drawPath(ear2D, paint2);

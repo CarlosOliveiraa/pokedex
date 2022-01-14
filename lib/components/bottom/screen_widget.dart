@@ -26,35 +26,39 @@ class ScreenWidget extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(width * 0.052),
         ),
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: constraints.maxWidth * 0.81,
-                  height: constraints.maxHeight * 0.69,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(width * 0.042),
-                      color: const Color(0xff777474)),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
+          children: [
+            LayoutBuilder(
+              builder: (context, constraints) {
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    LedScreenButton(
-                      size: constraints.maxWidth * 0.05,
+                    Container(
+                      width: constraints.maxWidth * 0.81,
+                      height: constraints.maxHeight * 0.69,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(width * 0.042),
+                          color: const Color(0xff777474)),
                     ),
-                    SizedBox(
-                      width: width * 0.55,
-                    ),
-                    SoundWidget(
-                      size: constraints.maxWidth * 0.08,
-                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        LedScreenButton(
+                          size: constraints.maxWidth * 0.05,
+                        ),
+                        SizedBox(
+                          width: width * 0.55,
+                        ),
+                        SoundWidget(
+                          size: constraints.maxWidth * 0.08,
+                        ),
+                      ],
+                    )
                   ],
-                )
-              ],
-            );
-          },
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
