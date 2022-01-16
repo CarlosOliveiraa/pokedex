@@ -34,7 +34,7 @@ class MyPainter1 extends CustomPainter {
     var paintBoca = Paint()
       ..color = const Color(0xff000000)
       ..strokeWidth = 1.0
-      ..style = PaintingStyle.stroke;
+      ..style = PaintingStyle.stroke; 
     var paintCheek = Paint()..color = const Color(0xffF00506);
 
     //CALDA.

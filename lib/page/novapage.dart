@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex_flutter/components/painter/eeve_painter.dart';
 import 'package:pokedex_flutter/components/painter/my_painter_widget.dart';
 
 class NovaPage extends StatefulWidget {
@@ -14,9 +15,9 @@ class _NovaPageState extends State<NovaPage> {
     return Scaffold(
       body: Center(
         child: Container(
-          child: const MyPainter(
-            width: 360,
-            height: 331,
+          child: const EevePainter(
+            width: 306,
+            height: 307,
           ),
         ),
       ),
