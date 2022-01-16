@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: NovaPage(),
+      home: HomePage(),
     );
   }
 }
