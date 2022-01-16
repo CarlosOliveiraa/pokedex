@@ -6,14 +6,14 @@ class MyPainter extends StatelessWidget {
   final double width;
   final double height;
 
-  const MyPainter({Key? key, this.width = 160, this.height = 131})
+  const MyPainter({Key? key, this.width = 160, this.height = 120})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
       painter: MyPainter1(),
-      child: Container(
+      child: SizedBox(
         width: width,
         height: height,
       ),
@@ -26,15 +26,15 @@ class MyPainter1 extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     var paint = Paint()
       ..color = const Color(0xff000000)
-      ..strokeWidth = 5.0
+      ..strokeWidth = 6.0
       ..style = PaintingStyle.stroke;
     var paint2 = Paint()..color = const Color(0xffFCE600);
     var paint3 = Paint()..color = const Color(0xff000000);
     var paint4 = Paint()..color = const Color(0xffFFFFFF);
     var paintBoca = Paint()
       ..color = const Color(0xff000000)
-      ..strokeWidth = 1.0
-      ..style = PaintingStyle.stroke; 
+      ..strokeWidth = 2.0
+      ..style = PaintingStyle.stroke;
     var paintCheek = Paint()..color = const Color(0xffF00506);
 
     //CALDA.
@@ -86,9 +86,9 @@ class MyPainter1 extends CustomPainter {
     Path ear1D = Path.combine(PathOperation.intersect, ear1Y, ear1);
     canvas.drawPath(ear1D, paint2);
 
-    //ORELHA ESQUERDA PARTE AMARELA
+    //ORELHA  PARTE AMARELA
     Path ear2Y = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.529, size.height * 0.01,
+      ..addOval(Rect.fromLTWH(size.width * 0.519, size.height * 0.01,
           size.width * 0.34, size.height * 0.60));
 
     Path ear2D = Path.combine(PathOperation.intersect, ear2Y, ear2);
@@ -134,41 +134,41 @@ class MyPainter1 extends CustomPainter {
 
     //OLHO ESQUERDO
     Path leftEye1 = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.37, size.height * 0.50,
-          size.width * 0.09, size.height * 0.11));
+      ..addOval(Rect.fromLTWH(size.width * 0.37, size.height * 0.53,
+          size.width * 0.08, size.height * 0.10));
     canvas.drawPath(leftEye1, paint);
     canvas.drawPath(leftEye1, paint3);
 
     Path leftEye2 = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.40, size.height * 0.51,
-          size.width * 0.05, size.height * 0.05));
+      ..addOval(Rect.fromLTWH(size.width * 0.40, size.height * 0.54,
+          size.width * 0.04, size.height * 0.05));
     canvas.drawPath(leftEye2, paint4);
 
     //OLHO DIREITO
     Path rightEye1 = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.64, size.height * 0.50,
-          size.width * 0.09, size.height * 0.11));
+      ..addOval(Rect.fromLTWH(size.width * 0.64, size.height * 0.54,
+          size.width * 0.08, size.height * 0.10));
     canvas.drawPath(rightEye1, paint);
     canvas.drawPath(rightEye1, paint3);
 
     Path rightEye2 = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.65, size.height * 0.52,
-          size.width * 0.05, size.height * 0.05));
+      ..addOval(Rect.fromLTWH(size.width * 0.65, size.height * 0.55,
+          size.width * 0.04, size.height * 0.05));
     canvas.drawPath(rightEye2, paint4);
 
     //NARIZ
     Path nose = Path()
-      ..addOval(Rect.fromLTWH(size.width * 0.54, size.height * 0.60,
+      ..addOval(Rect.fromLTWH(size.width * 0.54, size.height * 0.65,
           size.width * 0.021, size.height * 0.014));
     canvas.drawPath(nose, paint3);
 
     //BOCA
     Path mouth1 = Path()
-      ..moveTo(size.width * 0.47, size.height * 0.64)
-      ..quadraticBezierTo(size.width * 0.5, size.height * 0.66,
-          size.width * 0.55, size.height * 0.64)
-      ..quadraticBezierTo(size.width * 0.59, size.height * 0.66,
-          size.width * 0.62, size.height * 0.65);
+      ..moveTo(size.width * 0.47, size.height * 0.67)
+      ..quadraticBezierTo(size.width * 0.5, size.height * 0.72,
+          size.width * 0.55, size.height * 0.68)
+      ..quadraticBezierTo(size.width * 0.59, size.height * 0.73,
+          size.width * 0.63, size.height * 0.69);
 
     canvas.drawPath(mouth1, paintBoca);
   }

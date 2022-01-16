@@ -15,7 +15,7 @@ class _NovaPageState extends State<NovaPage> {
     return Scaffold(
       body: Center(
         child: Container(
-          child: const EevePainter(
+          child: const MyPainter(
             width: 306,
             height: 307,
           ),

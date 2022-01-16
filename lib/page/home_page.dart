@@ -33,11 +33,11 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: size.height * 0.37,
+              top: size.height * 0.35,
               left: size.width * 0.24,
               child: MyPainter(
-                width: size.width * 0.43,
-                height: size.height * 0.24,
+                width: size.width * 0.44,
+                height: size.height * 0.26,
               ),
             ),
             // const Align(
